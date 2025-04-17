@@ -2,7 +2,7 @@
 import { Route, Routes, Navigate} from 'react-router-dom'
 import UserDetail from './components/userDetail/UserDetail'
 import './App.css'
-import UserList from './components/userList/UserList'
+import UserList from './components/userList/UserList' 
 
 const App = () =>  {
   return (
@@ -11,7 +11,7 @@ const App = () =>  {
       <Routes>
         <Route path='/' element={<UserList/>}/>
         <Route path="/users/:id" element={<UserDetail/>} />
-        
+        <Route path="*" element={<Navigate to="/users" replace />} />
       </Routes>
      
     </div>
