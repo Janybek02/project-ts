@@ -1,8 +1,8 @@
 
 import { Route, Routes, Navigate} from 'react-router-dom'
-import UserDetail from './userDetail/UserDetail'
+import UserDetail from './components/userDetail/UserDetail'
 import './App.css'
-import UserList from './userList/UserList'
+import UserList from './components/userList/UserList'
 
 const App = () =>  {
   return (

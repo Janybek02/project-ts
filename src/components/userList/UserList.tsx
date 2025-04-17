@@ -1,17 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import image from "../../image/boy.png"
+import image from "../../../image/boy.png"
 import { Link } from "react-router-dom";
-interface Users {
-    id: number,
-    name: string,
-    username: string,
-    email: string,
-    phone: string,
-    website: string
-    company: any
-    address: any
-}
+import { Users } from "../../types";
 
 const UserList = () => {
     const [users, setUser] = useState<Users[]>([])
@@ -33,9 +24,9 @@ const UserList = () => {
         return user.name.toLowerCase().includes(search.toLowerCase());
     });
     return (
-        <div className="w-[full]  ">
+        <div className="w-full  ">
             <div className=" flex items-center justify-center">
-                <div className="w-full max-w-md p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 ">
+                <div className="w-full max-w-2xl p-4 bg-white border border-gray-200 rounded-lg shadow-sm sm:p-8 ">
                     <div className="flex items-center justify-between mb-4">
                         <h5 className="text-xl font-bold leading-none text-gray-900 ">Latest Customers</h5>
                     </div>
@@ -75,10 +66,10 @@ const UserList = () => {
                                             <li className="py-3 sm:py-4">
                                                 <div className="flex items-center">
                                                     <div className="shrink-0">
-                                                        <img className="w-8 h-8 rounded-full" src={image} alt="Neil image" />
+                                                        <img className="w-12 h-12 rounded-full" src={image} alt="Neil image" />
                                                     </div>
                                                     <div className="flex-1 min-w-0 ms-4">
-                                                        <p className="text-sm font-medium text-gray-900 truncate ">
+                                                        <p className="text-xl font-medium text-gray-900 truncate ">
                                                             {items.name}
                                                         </p>
                                                         <p className="text-sm text-gray-500 truncate:text-gray-400">
